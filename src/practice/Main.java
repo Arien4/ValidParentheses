@@ -7,17 +7,14 @@ public class Main {
         //String s = "[]{}(())()([{}])";
         //String s = "()()()";
         String s ="{}{}{{}}";
-        StringBuilder sb = new StringBuilder(s);
+
         System.out.println("The string " + s + " is" + (isValid(s) ? "" : " not") + " valid");
 
     }
 
     public static boolean isValid(String s) {
         StringBuilder sb = new StringBuilder(s);
-        if (deleteParentheses(sb).length() == 0) {
-            return true;
-        }
-        return false;
+        return deleteParentheses(sb).length() == 0;
 
     }
 
